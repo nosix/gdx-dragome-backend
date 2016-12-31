@@ -18,14 +18,17 @@ package com.badlogic.gdx.backends.dragome.soundmanager2;
 
 import com.dragome.commons.compiler.annotations.MethodAlias;
 import com.dragome.commons.javascript.ScriptHelper;
+import com.dragome.web.annotations.Keep;
 
 /** Ported from GWT backend
  * @author xpenatan */
 public class SoundManager {
 
 	public interface SoundManagerCallback {
+		@Keep
 		@MethodAlias(local_alias= "onready")
 		public void onready ();
+		@Keep
 		@MethodAlias(local_alias= "ontimeout")
 		public void ontimeout (String status, String errorType);
 	}
